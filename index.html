@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aggenzia viaggio last minute">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Gianluca Chiaravalloti">
+
+    <!-- CSS Framework Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+        <!-- CSS Custom -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Travel Viaggi</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg fixed-top shadow">
+            <a class="navbar-brand me-auto" href="#">
+                <img src="./assets/travel-logo.png" alt="logo travel">
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Agenzia Travel Viaggi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body text-center">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link m-lg-2 activate" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-lg-2" href="#anchor-offerte">Offerte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-lg-2" href="#anchor-summer">Summer</a>
+                        </li>
+                        <li class="nav-item item-offerta-giorno">
+                            <a class="nav-link m-lg-2" href="#anchor-offerta-giorno">Offerta del giorno</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-lg-2" href="#anchor-last-minute">Last Minute</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-lg-2" href="#anchor-testimonial">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-lg-2" data-bs-toggle="modal" data-bs-target="#contattaci" href="#">Contattaci</a>
+                        </li>
+                        <li class="nav-item">
+                            <p class="nav-link m-lg-2 totale-card"></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="login-button">Login</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <!-- End Navbar -->
+
+    <!-- Section jumbotron -->
+    <div class="container-fluid jumbotron">
+        <div id="carouselTravel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselTravel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselTravel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselTravel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active c-item">
+                    <img src="./assets/img-jumbotron-1.jpg" class="d-block w-100 c-img" alt="Immagine di copertina">
+                    <div class="carousel-caption top-0 mt-4">
+                        <p class="text-uppercase fs-3 mt-5">Il viaggio dei tuoi sogni</p>
+                        <h1 class="display-1 fw-bolder text-capitalize ">Travel Viaggi</h1>
+                        <button class="btn btn-light px-4 py-2 fs-5 mt-5">Scopri di più</button>
+                    </div>
+                </div>
+                <div class="carousel-item c-item">
+                    <img src="./assets/img-jumbotron-2.jpg" class="d-block w-100 c-img" alt="Immagine di copertina">
+                    <div class="carousel-caption top-0 mt-4">
+                        <p class="text-uppercase fs-3 mt-5">Il viaggio dei tuoi sogni</p>
+                        <h1 class="display-1 fw-bolder text-capitalize ">Travel Viaggi</h1>
+                        <button class="btn btn-light px-4 py-2 fs-5 mt-5">Scopri di più</button>
+                    </div>
+                </div>
+                <div class="carousel-item c-item">
+                    <img src="./assets/img-jumbotron-3.jpg" class="d-block w-100 c-img" alt="Immagine di copertina">
+                    <div class="carousel-caption top-0 mt-4">
+                        <p class="text-uppercase fs-3 mt-5">Il viaggio dei tuoi sogni</p>
+                        <h1 class="display-1 fw-bolder text-capitalize ">Travel Viaggi</h1>
+                        <button class="btn btn-light px-4 py-2 fs-5 mt-5">Scopri di più</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTravel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTravel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- End jumbotron -->
+
+    <!-- Section offerta della settimana -->
+    <div class="container-fluid mt-4" id="anchor-offerte">
+        <div class="info-offerte">
+            <h5>Offerte della Settimana</h5>
+            <p>Scopri le nostre offerte settimanali! Destinazioni mozzafiato, hotel esclusivi e
+                pacchetti convenienti per ogni viaggiatore. Prenota ora!</p>
+            <button class="btn btn-light nascondi-offerte">Nascondi</button>
+        </div>
+    </div>
+
+    <!-- Section card offerte della settimana -->
+    <div class="container mt-4" id="card-nascondi-offerte-settimana">
+        <div class="row gx-4 gy-4">
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-settimana">
+                    <div class="img1"><img src="./assets/img-card-1.jpg" class="card-img-top"
+                            alt="Foto offerta viaggio"></div>
+                    <div class="img2"><img src="./assets/travel-logo-card.png" alt="Logo Travel Viaggi"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Viaggio</h5>
+                        <p class="card-text">Esplora il fascino urbano delle città più affascinanti del mondo..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-settimana">
+                    <div class="img1"><img src="./assets/img-card-2.jpg" class="card-img-top"
+                            alt="Foto offerta viaggio"></div>
+                    <div class="img2"><img src="./assets/travel-logo-card.png" alt="Logo Travel Viaggi"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Viaggio</h5>
+                        <p class="card-text">Goditi il relax sulle spiagge incontaminate delle coste paradisiache.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-settimana">
+                    <div class="img1"><img src="./assets/img-card-3.jpg" class="card-img-top"
+                            alt="Foto offerta viaggio"></div>
+                    <div class="img2"><img src="./assets/travel-logo-card.png" alt="Logo Travel Viaggi"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Viaggio</h5>
+                        <p class="card-text">Esplora le isole esotiche e i tesori nascosti dei fondali marini.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-settimana">
+                    <div class="img1"><img src="./assets/img-card-4.jpg" class="card-img-top"
+                            alt="Foto offerta viaggio"></div>
+                    <div class="img2"><img src="./assets/travel-logo-card.png" alt="Logo Travel Viaggi"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta viaggio</h5>
+                        <p class="card-text">Rilassati sulle rive tranquille dei laghi più suggestivi e pittoreschi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-settimana">
+                    <div class="img1"><img src="./assets/img-card-5.jpg" class="card-img-top"
+                            alt="Foto offerta viaggio"></div>
+                    <div class="img2"><img src="./assets/travel-logo-card.png" alt="Logo Travel Viaggi"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta viaggio</h5>
+                        <p class="card-text">Rilassati sulle rive tranquille dei laghi più suggestivi e pittoreschi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-settimana">
+                    <div class="img1"><img src="./assets/img-card-6.jpg" class="card-img-top"
+                            alt="Foto offerta viaggio"></div>
+                    <div class="img2"><img src="./assets/travel-logo-card.png" alt="Logo Travel Viaggi"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Viaggio</h5>
+                        <p class="card-text">Esplora la bellezza selvaggia e misteriosa dei deserti più affascinanti del
+                            mondo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-settimana">
+                    <div class="img1"><img src="./assets/img-card-7.jpg" class="card-img-top"
+                            alt="Foto offerta viaggio"></div>
+                    <div class="img2"><img src="./assets/travel-logo-card.png" alt="Logo Travel Viaggi"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Viaggio</h5>
+                        <p class="card-text">Esplora le distese infinite del deserto a bordo di una jeep, vivendo
+                            un'avventura indimenticabile tra dune dorate e cieli infiniti.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-settimana">
+                    <div class="img1"><img src="./assets/img-card-8.jpg" class="card-img-top"
+                            alt="Foto offerta viaggio"></div>
+                    <div class="img2"><img src="./assets/travel-logo-card.png" alt="Logo Travel Viaggi"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Viaggio</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End section offerta della settimana -->
+
+    <!-- Section Welcome summer -->
+    <div class="container-fluid mt-4" id="anchor-summer">
+        <div class="info-offerte">
+            <h5>Offerte Summer</h5>
+            <p>Esplora le nostre imperdibili offerte estive! Destinazioni da sogno, hotel di lusso e
+                pacchetti vacanza su misura. Prenota la tua avventura ora!</p>
+            <button class="btn btn-light nascondi-summer">Nascondi</button>
+        </div>
+    </div>
+
+    <!-- Section card offerte summer -->
+    <div class="container mt-4" id="card-nascondi-offerte-summer">
+        <div class="row gx-4 gy-4">
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-offerta-summer card-summer">
+                    <div class="img1"><img src="./assets/img-card-summer-1.jpg" class="card-img-top"
+                            alt="Foto offerta summer"></div>
+                    <div class="img2"><img src="./assets/offer-summer.jpg" alt="Offerta summer"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta estiva</h5>
+                        <p class="card-text">Pacchetti esclusivi: mare cristallino, sole caldo e relax totale.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-offerta-summer card-summer">
+                    <div class="img1"><img src="./assets/img-card-summer-2.jpg" class="card-img-top"
+                            alt="Foto offerta summer"></div>
+                    <div class="img2"><img src="./assets/offer-summer.jpg" alt="Offerta summer"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta estiva</h5>
+                        <p class="card-text">Risparmia sui viaggi estivi: spiagge dorate, avventure emozionanti e relax
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-offerta-summer card-summer">
+                    <div class="img1"><img src="./assets/img-card-summer-3.jpg" class="card-img-top"
+                            alt="Foto offerta summer"></div>
+                    <div class="img2"><img src="./assets/offer-summer.jpg" alt="Offerta summer"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Estiva</h5>
+                        <p class="card-text">Soggiorni estivi perfetti: risparmia e vivi un'avventura da ricordare.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-offerta-summer card-summer">
+                    <div class="img1"><img src="./assets/img-card-summer-4.jpg" class="card-img-top"
+                            alt="Foto offerta summer"></div>
+                    <div class="img2"><img src="./assets/offer-summer.jpg" alt="Offerta summer"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Estiva</h5>
+                        <p class="card-text">Offerte speciali per le tue avventure estive sotto il sole.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-offerta-summer card-summer">
+                    <div class="img1"><img src="./assets/img-card-summer-5.jpg" class="card-img-top"
+                            alt="Foto offerta summer"></div>
+                    <div class="img2"><img src="./assets/offer-summer.jpg" alt="Offerta summer"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Estiva</h5>
+                        <p class="card-text">Soggiorni estivi perfetti: risparmia e vivi un'avventura da ricordare.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-offerta-summer card-summer">
+                    <div class="img1"><img src="./assets/img-card-summer-6.jpg" class="card-img-top"
+                            alt="Foto offerta summer"></div>
+                    <div class="img2"><img src="./assets/offer-summer.jpg" alt="Offerta summer"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Estiva</h5>
+                        <p class="card-text">Sconti imperdibili per le tue vacanze estive all'insegna del divertimento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-offerta-summer card-summer">
+                    <div class="img1"><img src="./assets/img-card-summer-7.jpg" class="card-img-top"
+                            alt="Foto offerta summer"></div>
+                    <div class="img2"><img src="./assets/offer-summer.jpg" alt="Offerta summer"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Offerta Estiva</h5>
+                        <p class="card-text">Affrettati! Offerte esclusive per le tue vacanze estive da sogno.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-3">
+                <div class="card card-offerta-summer card-summer">
+                    <div class="img1"><img src="./assets/img-card-summer-8.jpg" class="card-img-top"
+                            alt="Foto offerta summer"></div>
+                    <div class="img2"><img src="./assets/offer-summer.jpg" alt="Offerta summer"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Pacchetti estivi su misura: scopri le nostre imperdibili promozioni ora.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End section welcome summer -->
+
+    <!-- Section offerta del giorno -->
+    <div class="container-fluid mt-4 offerta-giorno-display" id="anchor-offerta-giorno">
+        <div class="offerta-giorno">
+            <h5>Offerta del giorno</h5>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="card card-offerta-giorno shadow">
+            <div class="row">
+                <div class="col-8">
+                    <img src="./assets/offerta-del-giorno.jpg" class="card-img-top" alt="Viaggio offerta del giorno">
+                </div>
+                <div class="col-4">
+                    <div class="card-body">
+                        <h5 class="text-center">Viaggio in barca a vela</h5>
+                        <p class="text-bg-info text-center p-4 shadow">Date: dal 25.06.2024 al 30.08.2024</p>
+                        <p class="text-bg-primary text-center p-4 shadow">€ 70,00/giorno</p>
+                        <p class="card-text">Goditi una giornata di avventura e relax sulle onde cristalline del mare
+                            con il nostro speciale
+                            viaggio in barca a vela! Salpa con il nostro equipaggio esperto e lasciati cullare dalla
+                            brezza marina mentre esplori
+                            incantevoli baie nascoste e spiagge incontaminate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End offerta del giorno -->
+
+    <!-- Section last minute -->
+    <div class="container-fluid mt-4" id="anchor-last-minute">
+        <div class="last-minute">
+            <h5>Last Minute</h5>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col col-md-4 col-lg-2">
+                <div class="card card-last-minute">
+                    <img src="https://picsum.photos/id/12/200/300" class="card-img-top" alt="Immagine last minute">
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-2">
+                <div class="card card-last-minute">
+                    <img src="https://picsum.photos/id/13/200/300" class="card-img-top" alt="Immagine last minute">
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-2">
+                <div class="card card-last-minute">
+                    <img src="https://picsum.photos/id/14/200/300" class="card-img-top" alt="Immagine last minute">
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-2">
+                <div class="card card-last-minute">
+                    <img src="https://picsum.photos/id/15/200/300" class="card-img-top" alt="Immagine last minute">
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-2">
+                <div class="card card-last-minute">
+                    <img src="https://picsum.photos/id/16/200/300" class="card-img-top" alt="Immagine last minute">
+                </div>
+            </div>
+            <div class="col col-md-4 col-lg-2">
+                <div class="card card-last-minute">
+                    <img src="https://picsum.photos/id/17/200/300" class="card-img-top" alt="Immagine last minute">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End section last minute -->
+
+    <!-- Section testimonial -->
+    <div class="container-fluid mt-4" id="anchor-testimonial">
+        <div class="testimonial">
+            <h5>Testimonial</h5>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row gy-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card card-testimonial">
+                    <img src="https://picsum.photos/id/64/200/300" class="card-img-top"
+                        alt="Immagine by Alexander Shustov">
+                    <div class="card-body">
+                        <h5 class="card-title">Immagine by Alexander Shustov</h5>
+                        <p class="card-text">Mar. 25.03.2024</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, dolore?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card card-testimonial">
+                    <img src="https://picsum.photos/id/996/200/300" class="card-img-top" alt="Immagine by Léa Dubedout">
+                    <div class="card-body">
+                        <h5 class="card-title">Immagine by Léa Dubedout</h5>
+                        <p class="card-text">Mar. 25.03.2024</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores optio voluptates tempora
+                            error corrupti vitae atque neque fugiat quidem odio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card card-testimonial">
+                    <img src="https://picsum.photos/id/375/200/300" class="card-img-top"
+                        alt="Immagine by Wellington Sanipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Immagine by Wellington Sanipe</h5>
+                        <p class="card-text">Mar. 25.03.2024</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, quis repellat eveniet error
+                            quod distinctio?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End section testimonial -->
+
+    <!-- Section Modal -->
+    <div class="modal fade" id="contattaci" tabindex="-1" aria-labelledby="contattaci" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="contattaci">Contattaci</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Messaggio:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light invio-modal">Invia Messaggio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End section modal -->
+
+    <!-- Footer -->
+    <footer class="container-fluid mt-4 border-top shadow">
+        <div class="row text-center">
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <img class="mb-2" src="./assets/travel-logo.png" alt="Logo travel viaggi">
+                <p class="mb-3 text-body-secondary">&copy; 2024</p>
+                <h5>Per informazioni</h5>
+                <button class="btn btn-light m-4" data-bs-toggle="modal" data-bs-target="#contattaci">Contattaci</button>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <h5>Offerte</h5>
+                <ul class="list-unstyled text-small">
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Australia</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Barcellona</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Marocco</a>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Miami</a></li>
+                    </li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Asia</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Scozia</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <h5>Summer</h5>
+                <ul class="list-unstyled text-small">
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Dubai</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Londra</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Parigi</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Roma</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Team</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Località</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Privacy</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none link-select" href="#">Termini & Condizioni</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- Javascript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <!-- Javascript Personale -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+/* 
+    CSS Custom
+    Data: 22.03.2024
+    by Gianluca Chiaravalloti
+*/
+
+/* Navbar */
+.login-button {
+    border: 1px solid #000;
+    color: #000;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    margin-left: 30px;
+}
+
+.login-button:hover {
+    background-color: rgb(8, 73, 117);
+    color: #fff;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav-link:hover, .nav-link.activate {
+    color: #fff;
+    background-color: rgb(8, 73, 117);
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px;  
+}
+
+.navbar-brand img {
+    width: 160px;
+    margin-left: 20px;
+}
+
+.totale-card {
+    color: red;
+    font-weight: 700;
+}
+/* -------------------- End navbar */
+
+/* Jumbotron */
+.container-fluid {
+    --bs-gutter-x: 0;
+    overflow-x: hidden;
+}
+
+.jumbotron {
+    margin-top: 80px;
+}
+
+.c-item {
+    height: 600px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption p {
+    font-weight: 700;
+    color: rgb(8, 73, 117);
+}
+
+.btn {
+    border: 1px solid #000;
+    border-radius: 50px;
+    color: #000;
+    border: 1px solid #fff;
+    font-size: 14px;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: rgb(8, 73, 117);
+    border: 1px solid rgb(8, 73, 117);
+    font-size: 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+/* -------------------- End jumbotron */
+
+/* Section Offerta della settimana */
+#card-offerte-settimana {
+    display: block;
+}
+
+.info-offerte {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+#anchor-offerte, #anchor-summer, #anchor-offerta-giorno, #anchor-last-minute, #anchor-testimonial {
+    padding-top: 100px !important;
+    margin-top: -100px !important;
+}
+
+.offerta-titolo {
+    font-size: 3rem;
+}
+/* -------------------- End section offerta della settimana */
+
+/* Section Welcome summer */
+.info-summer {
+    height: auto;
+    text-align: center;
+    padding: 20px;
+}
+/* -------------------- End section welcome summer */
+
+/* Card */
+.card-settimana img, .card-offerta-summer img {
+    height: 180px;
+    border-radius: 30px;
+}
+
+.card-settimana, .card-offerta-summer {
+    height: 500px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.card-summer {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    /* overflow: hidden; */
+}
+
+.card-settimana:hover, .card-offerta-summer:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.img1 img {
+    width: 100%;
+}
+
+.img2 img {
+    position: relative;
+    display: block;
+    margin-left:  20px;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: -30px;
+}
+
+.info-offerte, .info-summer {
+    background-color: #ddd;
+    height: 200px;
+    margin-top: 20px;
+    padding: 20px;
+}
+/* -------------------- End card */
+
+/* Section Offerta del giorno, last minute */
+.card-offerta-giorno {
+    display: block;
+    border-radius: 30px;
+}
+
+.card-offerta-giorno img {
+    height: 100%;
+    border-radius: 30px;
+}
+
+/* Media queries offerta del giorno */
+@media (max-width: 576px) {
+    .offerta-giorno-display, .card-offerta-giorno {
+        display: none;    
+    }
+
+    .item-offerta-giorno {
+        display: none;
+    }
+} 
+
+.offerta-giorno, .last-minute, .testimonial {
+    background-color: #ddd;
+    height: 80px;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.info-offerte h5 .offerta-giorno h5, .last-minute h5, .testimonial h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card-last-minute {
+    margin-top: 20px;
+}
+
+.card-last-minute, .card-last-minute img {
+    border-radius: 30px;
+}
+
+.card-last-minute {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-last-minute:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Media queries last minute */
+@media (max-width: 576px) {
+    .card-last-minute {
+        width: 150px;    
+    }
+} 
+/* -------------------- End section offerta del giorno, last minute */
+
+/* Card testimonial */
+.card-testimonial {
+    height: auto;
+}
+
+.card-testimonial img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 20px;
+}
+/* -------------------- End card testimonial */
+
+/* Btn modal */
+.invio-modal {
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 14px;
+}
+/* -------------------- End footer */
+
+/* Footer */
+footer {
+    height: 100%;
+    background-color: #ddd;
+    padding: 20px;
+}
+
+footer img, small {
+    width: 150px;
+    margin-left: 30px;
+}
+
+.link-secondary:hover {
+    color: rgb(8, 73, 117) !important;
+    font-weight: 500;
+}
+/* -------------------- End footer */
